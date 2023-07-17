@@ -27,7 +27,7 @@ class Product(models.Model):
     last_modified = models.DateField(auto_now=True, verbose_name='Дата последнего изменения')
 
     def __str__(self):
-        return f'{self.title}'
+        return f'{self.title} ({self.category}): {self.price}'
 
     class Meta:
         verbose_name = 'Товар'
